@@ -1,0 +1,58 @@
+%tshadowed{
+    @include text-shadow(10px 10px 0 rgba(52, 27, 43, 0.2));
+}
+%shadowed{
+    @include box-shadow(1px 1px 0 rgba(52, 27, 43, 0.2), 10px 10px 1px rgba(52, 27, 43, 0.2));
+}
+%shadowed_hover{
+    @include box-shadow(15px 15px 2px rgba(52, 27, 43, 0.1));
+    transform: translate(-2.5px, -2.5px);
+}
+%shadowed_active{
+    @include box-shadow(5px 5px 0 rgba(52, 27, 43, 0.4));
+    transform: translate(2.5px, 2.5px);
+}
+%ishadowed{
+    //@include box-shadow(inset 1px 1px 0 rgba(0, 0, 0, 0.2), inset 10px 10px 1px rgba(0, 0, 0, 0.2), inset -1px -1px 0 rgba(255, 255, 255, 1));
+    @include box-shadow(inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 10px 10px 1px rgba(0, 0, 0, 0.2), inset -1px -1px 0 rgba(255, 255, 255, 1));
+}
+
+%fshadowed{
+    @include box-shadow(0 10px 0 rgba(52, 27, 43, 0.2));
+}
+
+%vol1d{
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+%vol3d{
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+
+
+%inset{
+//        background-color: #565656;
+//        color: transparent;
+//        text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+//        -webkit-background-clip: text;
+//            -moz-background-clip: text;
+//                background-clip: text;
+//
+//
+
+
+
+  background-color: #ADACAD;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+
+    @-moz-document url-prefix() {
+        background: -moz-linear-gradient(transparent, transparent);
+        color: #E3E3E3;
+        text-shadow: 2px 2px 2px #A2948F, -2px -2px 1px #FFF, 2px 2px 1px #7A6D6D, -2px 2px 1px #CDDCEC, 2px -2px 1px #CDDFE9, 2px 3px 6px #D1BABA;
+        opacity: 0.6;
+    }
+}

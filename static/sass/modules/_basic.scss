@@ -1,0 +1,259 @@
+.verticalstripe{
+    background-color: #E8E8E8;
+    background-image: linear-gradient(90deg,transparent 50%, rgba(249, 249, 249, 0.1) 50%);
+    background-size: 5px 5px;
+}
+
+.fibredark{
+    background:
+        radial-gradient(#E8E8E8 10%, transparent 75%) 0 0,
+        radial-gradient(#E8E8E8 10%, transparent 75%) 50% 96%;
+    background-color: rgb(249, 249, 249);
+    background-size: 75px 75px;
+}
+body {
+    /* min-width: (containers) */
+    // min-width: 1200px;
+//    background:
+//        radial-gradient($lightgrey 5%, transparent 16%) 0 0,
+//        radial-gradient($lightgrey 5%, transparent 16%) 8px 7px,
+//        radial-gradient(rgba(255, 255, 255, 1) 15%, transparent 20%) 0 1px,
+//        radial-gradient(rgba(255, 255, 255, 1) 15%, transparent 20%) 8px 8px;
+    background: radial-gradient(#DEDFE1 5%, transparent 16%) 0 0, radial-gradient(#DCDFE1 5%, transparent 16%) 7px 7px, radial-gradient(#F8FBFF 15%, transparent 20%) 0 1px, radial-gradient(#F8FBFF 15%, transparent 20%) 8px 8px;
+    background-color: $silver;
+    background-size:16px 16px;
+    // padding-top: 0.85em;
+    padding-top: 3.5em;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFEFF;
+}
+
+
+/* Basic */
+
+body, input, select, textarea {
+    color: $grey;
+    font-family: $font-regular;
+	font-weight: 300;
+    font-size: 15pt;
+    letter-spacing: 0.025em;
+    line-height: 1.75em;
+}
+
+a {
+    color: $green;
+    text-decoration: none;
+    border-bottom: dotted 1px;
+}
+
+a:hover {
+    border-bottom-color: transparent;
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+p, ul, ol, dl, table, blockquote {
+    margin: 0 0 1.25em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-weight: 900;
+    line-height: 1.75em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+h3, h4, h5, h6 {
+    font-weight: 300;
+}
+h1.title, h2.title, h3.title, h4.title, h5.title, h6.title {
+    text-align: center;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
+    border: 0;
+}
+
+h2 {
+    font-size: 3.0em;
+    line-height: 0.9em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    margin-top: 0.6em;
+}
+
+h3 {
+    font-size: 1.15em;
+    letter-spacing: 0.025em;
+}
+
+sub {
+    font-size: 0.8em;
+    position: relative;
+    top: 0.5em;
+}
+
+sup {
+    font-size: 0.8em;
+    position: relative;
+    top: -0.5em;
+}
+
+hr {
+    border-top: solid 1px $lightgrey;
+    border: 0;
+    margin-bottom: 1.5em;
+}
+
+blockquote {
+    border-left: solid 0.3em #c8cdd2;
+    font-style: italic;
+    padding: 0.2em 0 0.2em 1em;
+    color: $lightgrey;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    -moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: none;
+    border: solid 1px $lightgrey;
+    color: inherit;
+    display: block;
+    padding: 0.75em;
+    text-decoration: none;
+    width: 100%;
+    outline: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: $lightgreen;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    line-height: 1em;
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+    position: relative;
+    top: 3px;
+}
+
+:-moz-placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
+::-moz-placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
+
+.image {
+    border: 0;
+    position: relative;
+}
+
+ol {
+    list-style: decimal;
+    padding-left: 1.25em;
+}
+
+ol li {
+    padding-left: 0.25em;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+ul li {
+    padding-left: 0.5em;
+}
+
+table {
+    width: 100%;
+}
+
+table tbody tr {
+    border-bottom: solid 1px $silver;
+}
+
+//table td {
+//    padding: 0.5em 1em 0.5em 1em;
+//}
+
+table th {
+    font-weight: 400;
+    padding: 0.5em 1em 0.5em 1em;
+    text-align: left;
+}
+
+table thead {
+    background: #7c8081;
+    color: white;
+}
+
+td {
+    vertical-align: top;
+}
+
+.button {
+    background: none;
+    border: solid 1px;
+    color: inherit;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    min-width: 18em;
+    padding: 0.75em 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: $lightgrey;
+    border-color: inherit;
+}
+
+.footnote{
+    color: lightgrey;
+}
+p{
+//    text-align: justify;
+    line-height: 1.25em;
+}

@@ -1,0 +1,113 @@
+header.major {
+    padding-bottom: 2em;
+}
+
+header.special {
+    margin-bottom: 0em;
+    padding-top: 4em;
+    position: relative;
+    text-align: center;
+}
+header.special .-icon-logo{
+    font-family: 'Exo 2';
+    @extend %vol3d;
+    margin-top: -64px;
+    color: white;
+    font-size: 66px;
+    line-height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -33px;
+    top: 1em;
+    font-weight: bold;
+    line-height: 0.30;
+    text-indent: 0.06em;
+    letter-spacing: 0.2em;
+    font-size: 4em;
+    margin-top: -1.00em;
+    margin-left: -0.9em;
+    b{
+    font-weight: normal;
+    }
+//    opacity: 0.65;
+}
+
+header.special:before, header.special:after {
+    border-bottom: solid 1.5px;
+    border-top: solid 1.5px;
+    content: '';
+    height: 7px;
+    opacity: 0.15;
+    position: absolute;
+    top: 1.75em;
+    width: 46%;
+    background-color: $lightbrown;
+}
+
+header.special:before {
+    left: 0;
+    border-radius: 0 100% 0 0;
+}
+
+header.special:after {
+    right: 0;
+    border-radius: 100% 0 0 0;
+}
+
+header.special h2 {
+    margin-top: 0;
+}
+
+header.special h2 + p {
+    //margin-bottom: 0;
+    /*padding-top: 1.5em;*/
+}
+header.special p{
+    text-align: justify;
+    line-height: 1.25em;
+}
+header.special p:first-of-type{
+    margin-top: 5.5em;
+}
+
+header.special .icon {
+    cursor: default;
+    height: 7em;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 1em;
+    width: 100%;
+}
+
+header.special .icon:before {
+    font-size: 3.5em;
+    opacity: 0.35;
+}
+
+.stripe{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 1.2em 0;
+    margin-bottom: 1em;
+    background: #F9F9F9;
+    -webkit-box-shadow: inset 0px 1px 0px #fff, 0px 0px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0px 1px 0px #fff, 0px 0px 2px rgba(0,0,0,0.15);
+    box-shadow: inset 0px 1px 0px #fff, 0px 0px 2px rgba(0,0,0,0.15), black 0px 2px 5px -3px;
+    background: linear-gradient(90deg, #F1F1F1, white 10%, #F1F1F1 40%, #F9F9F9 60%, white 90%, #EFEFEF);
+    &:after{
+        content: "";
+        display: block;
+        height: 2em;
+        position: absolute;
+        //background: red;
+        bottom: -2em;
+        width: 100%;
+        background: radial-gradient(ellipse at top left, rgba(0,0,0,0.5) 0%, transparent 30%), radial-gradient(ellipse at top right, rgba(0,0,0,0.5) 0%, transparent 30%);
+    }
+
+    h2{
+        transform: rotate(-1deg);
+    }
+}

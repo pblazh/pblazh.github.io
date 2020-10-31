@@ -1,0 +1,86 @@
+.container{
+    @include clearfix;
+    @extend %shadowed;
+    position: relative;
+    margin: 0 10%;
+    margin-bottom: 4em;
+    padding: 1em 4em;
+
+
+    h2{
+        @extend %inset;
+        opacity: 1;
+        margin-top: 0.55em;
+    }
+}
+@media (max-width: 850px){
+    h2{
+        font-size: 2.4em;
+    }
+}
+@media (max-width: 700px){
+    .container{
+        padding: 1em 1em;
+        margin: 0 5%;
+    }
+    h2{
+        font-size: 2.3em;
+        margin-top: 0.65em;
+    }
+}
+@media (max-width: 600px){
+    h2{
+        font-size: 2.2em;
+        margin-top: 0.8em;
+    }
+}
+@media (max-width: 460px){
+    .container{
+        padding: 1em 0.5em;
+        margin: 0 0;
+    }
+    h2{
+        font-size: 1.8em;
+        margin-top: 0.9em;
+    }
+}
+.wrapper{
+    @extend .container;
+    @extend %ishadowed;
+    @extend .verticalstripe;
+    background-color: $green;
+    color: white;
+    h2{
+        color: white;
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+        background: none;
+    }
+
+    .left{
+//        width: 75%;
+        float: left;
+    }
+    .right{
+//        right: 25%;
+        float: right;
+        ul{
+            list-style: none;
+        }
+        li{
+            @extend %tshadowed;
+            float: right;
+            font-size: 5.25em;
+            width: 1em;
+            height: 1.1em;
+        }
+    }
+}
+.video_wrapper{
+    @extend .wrapper;
+    margin: 0;
+    iframe{
+        width: 100%;
+        /*max-width: 700px;*/
+    }
+}
+

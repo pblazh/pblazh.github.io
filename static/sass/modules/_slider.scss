@@ -1,0 +1,126 @@
+.css-slider{
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    width: 100%;
+    transform: translate3d(0,0,0);
+}
+
+.css-slider .slides > *{
+    display: inline-block;
+    width: 100%;
+}
+.css-slider > label,
+.css-slider > input{
+    position: relative;
+    z-index: 1;
+    top: 0;
+    display: none;
+}
+
+
+.css-slider .slides{
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.css-slider .slides img{
+    vertical-align: top;
+}
+
+/*------ Two way slider -------------*/
+
+.css-slider.two-way > label,
+.css-slider.two-way input{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.css-slider.two-way > input:checked,
+.css-slider.two-way > input:checked+input~input{
+    display: none;
+}
+.css-slider.two-way > input:checked+input{
+    left: auto;
+    right: 0;
+}
+
+/*------------------------ANIMATION-----------------------------------*/
+.css-slider .slides > *{
+    transition: margin-left 0.3s  ease-in-out;
+}
+.css-slider .slides > *{
+    display: inline-block;
+    transition: margin-left 0.3s  ease-in-out;
+}
+
+@for $i from 2 through 20 {
+    input:nth-of-type(#{$i}):checked~.slides > *:first-child{
+        margin-left: $i * -100%  + 100%;
+    }
+}
+
+
+
+.css-slider.styled  label:hover,
+.css-slider.styled  input:hover+label{
+     color: white;
+     color: $lightgreen;
+ }
+.css-slider.styled  input:checked+label{
+     background: black;
+     color: white;
+ }
+.css-slider.styled  .slides img{
+    border: solid 10px #E8EEF4;
+}
+.css-slider.styled  label{
+     //@extend %tshadowed;
+     font-family: 'icomoon';
+     cursor: pointer;
+     display: inline-block;
+     width: 42px;
+     height: 32px;
+     line-height: 32px;
+     border-radius: 20px;
+     color: white;
+
+     font-size: 32px;
+
+     margin-bottom: 5px;
+     color: $green;
+ }
+
+
+/* ------- 2 way ----------- */
+.css-slider.two-way.styled label{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 3.5em;
+    text-shadow: -1px -1px 0 #3A9888, -8px -8px 1px rgba(0,0,0,0.1);
+    transform: rotate(180deg);
+}
+
+.css-slider.styled  input+label:hover,
+.css-slider.styled  input:hover+label{
+    text-shadow: -1px -1px 0 #3A9888, -9px -9px 3px rgba(0,0,0,0.1);
+    transform: translate(-4px, -4px), rotate(0deg);
+}
+.css-slider.two-way.styled > input:checked+label+input~label:hover{
+    text-shadow: 1px 1px 0 #3A9888, 9px 9px 3px rgba(0,0,0,0.1);
+}
+
+.css-slider.two-way.styled > input:checked+label,
+.css-slider.two-way.styled > input:checked+label+input+label~label{
+    display: none;
+}
+.css-slider.two-way.styled > input:checked+label+input~label{
+    left: auto;
+    right: 0;
+    transform: rotate(0deg);
+    text-shadow: 1px 1px 0 #3A9888, 8px 8px 1px rgba(0,0,0,0.1);
+}

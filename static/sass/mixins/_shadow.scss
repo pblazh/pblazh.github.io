@@ -1,0 +1,17 @@
+@mixin inner-shadow($offset...) {
+    -webkit-box-shadow: inset $offset;
+    -moz-box-shadow:    inset $offset;
+    box-shadow:         inset $offset;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow:    $shadow;
+    box-shadow:         $shadow;
+}
+
+@mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow:    $shadow;
+    text-shadow:         $shadow;
+}
